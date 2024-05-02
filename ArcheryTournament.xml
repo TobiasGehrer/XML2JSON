@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tournament SYSTEM "ArcheryTournament.dtd">
+
+<tournament>
+
+	<!-- Shooting Styles -->
+	<!-- ? null oder 1, + mindestens 1 bis viele, * null bis viele -->
+	
+	<title>Archery Tournament 2024</title>
+
+	<shooting-style id="BB-R">
+		<style-name>Barebow Recurve</style-name>
+	</shooting-style>
+	
+	<shooting-style id="FS-C">
+		<style-name>Freestyle Limited Comp</style-name>
+	</shooting-style>
+	
+	<shooting-style id="TR">
+		<style-name>Traditional Recurve Bow</style-name>
+	</shooting-style>
+	
+	
+	<!-- Locations -->
+	
+	<location id ="location-1">Elfenbogen Ecke</location>
+	<location id ="location-2">Zielgenau Park</location>
+	<location id ="location-3">Kindergarten</location>
+	<location id ="location-4">Bogengarten</location>
+
+	<!--  Group's -->
+	
+	<group id="Group-A-BBR">
+		
+		<start-time>08:00</start-time>
+		<end-time>10:00</end-time>
+		<start-location location-id ="location-1"/>
+		<style shooting-style-id ="BB-R"/>
+		<group-member person-id="BBR-FSC-1"/>
+		<group-member person-id="BBR-FSC-2"/>	
+		<group-member person-id="BBR-FSC-3"/>	
+		<group-member person-id="BBR-FSC-4"/>		
+	</group>
+	
+	<group id="Group-B-BBR">
+		<start-time>08:00</start-time>
+		<end-time>11:00</end-time>
+		<start-location location-id ="location-2"/>
+		<style shooting-style-id ="BB-R"/>
+		<group-member person-id="TR-BBR-9"/>	
+		<group-member person-id="TR-BBR-10"/>	
+		<group-member person-id="TR-BBR-11"/>	
+		<group-member person-id="TR-BBR-12"/>			
+	</group>
+	
+	<group id="Group-A-FSC">
+		<start-time>09:00</start-time>
+		<end-time>10:30</end-time>
+		<start-location location-id ="location-3"/>
+		<style shooting-style-id ="FS-C"/>
+		<group-member person-id="BBR-FSC-1"/>	
+		<group-member person-id="BBR-FSC-2"/>	
+		<group-member person-id="BBR-FSC-3"/>	
+		<group-member person-id="BBR-FSC-4"/>		
+	</group>
+	
+	<group id="Group-B-FSC">
+		<start-time>07:30</start-time>
+		<end-time>09:30</end-time>
+		<start-location location-id ="location-4"/>
+		<style shooting-style-id ="FS-C"/>
+		<group-member person-id="TR-FSC-5"/>	
+		<group-member person-id="TR-FSC-6"/>	
+		<group-member person-id="TR-FSC-7"/>	
+		<group-member person-id="TR-FSC-8"/>		
+	</group>
+	
+	<group id="Group-A-TR">
+		<start-time>14:00</start-time>
+		<end-time>15:00</end-time>
+		<start-location location-id ="location-1"/>
+		<style shooting-style-id ="TR"/>
+		<group-member person-id="TR-BBR-9"/>	
+		<group-member person-id="TR-BBR-10"/>	
+		<group-member person-id="TR-BBR-11"/>	
+		<group-member person-id="TR-BBR-12"/>				
+	</group>
+	
+	<group id="Group-B-TR">
+		<start-time>14:00</start-time>
+		<end-time>15:00</end-time>
+		<start-location location-id ="location-2"/>
+		<style shooting-style-id ="TR"/>
+		<group-member person-id="TR-FSC-5"/>	
+		<group-member person-id="TR-FSC-6"/>	
+		<group-member person-id="TR-FSC-7"/>	
+		<group-member person-id="TR-FSC-8"/>			
+	</group>
+	
+			
+	<!--     Person's               -->
+	
+	
+	<person id="BBR-FSC-1">
+		<firstname>Robert</firstname>
+		<lastname>Roberts</lastname>
+		<birthyear>1962</birthyear>
+		<gender>M</gender>
+		<style shooting-style-id ="BB-R"/>
+		<style shooting-style-id ="FS-C"/>		
+		<score shooting-style-id="BB-R">100</score>
+		<score shooting-style-id="FS-C">111</score>
+	</person>	
+	
+	<person id="BBR-FSC-2">
+		<firstname>Anna</firstname>
+		<lastname>Schmidt</lastname>
+		<birthyear>1985</birthyear>
+		<gender>W</gender>
+		<style shooting-style-id ="BB-R"/>
+		<style shooting-style-id ="FS-C"/>
+		<score shooting-style-id="BB-R">102</score>
+		<score shooting-style-id="FS-C">112</score>
+	</person>	
+	
+	<person id="BBR-FSC-3">
+		<firstname>Markus</firstname>
+		<lastname>Wagner</lastname>
+		<birthyear>1990</birthyear>
+		<gender>M</gender>
+		<style shooting-style-id ="BB-R"/>
+		<style shooting-style-id ="FS-C"/>
+		<score shooting-style-id="BB-R">129</score>
+		<score shooting-style-id="FS-C">89</score>
+	</person>	
+	
+	<person id="BBR-FSC-4">
+		<firstname>Laura</firstname>
+		<lastname>Mueller</lastname>
+		<birthyear>1982</birthyear>
+		<gender>W</gender>
+		<style shooting-style-id ="BB-R"/>
+		<style shooting-style-id ="FS-C"/>
+		<score shooting-style-id="BB-R">32</score>
+		<score shooting-style-id="FS-C">1</score>
+	</person>	
+	
+	<person id="TR-FSC-5">
+		<firstname>Max</firstname>
+		<lastname>Fischer</lastname>
+		<birthyear>1978</birthyear>
+		<gender>M</gender>
+		<style shooting-style-id ="TR"/>
+		<style shooting-style-id ="FS-C"/>
+		<score shooting-style-id="TR">154</score>
+		<score shooting-style-id="FS-C">12</score>
+	</person>	
+	
+	<person id="TR-FSC-6">
+		<firstname>Julia</firstname>
+		<lastname>Maier</lastname>
+		<birthyear>1995</birthyear>
+		<gender>W</gender>
+		<style shooting-style-id ="TR"/>
+		<style shooting-style-id ="FS-C"/>
+		<score shooting-style-id="TR">155</score>
+		<score shooting-style-id="FS-C">123</score>
+	</person>	
+	
+	<person id="TR-FSC-7">
+		<firstname>Simon</firstname>
+		<lastname>Becker</lastname>
+		<birthyear>1989</birthyear>
+		<gender>M</gender>
+		<style shooting-style-id ="TR"/>
+		<style shooting-style-id ="FS-C"/>
+		<score shooting-style-id="TR">55</score>
+		<score shooting-style-id="FS-C">87</score>
+	</person>	
+	
+	<person id="TR-FSC-8">
+		<firstname>Sarah</firstname>
+		<lastname>Weber</lastname>
+		<birthyear>1980</birthyear>
+		<gender>W</gender>
+		<style shooting-style-id ="TR"/>
+		<style shooting-style-id ="FS-C"/>
+		<score shooting-style-id="TR">99</score>
+		<score shooting-style-id="FS-C">56</score>
+	</person>
+	
+	<person id="TR-BBR-9">
+		<firstname>Michael</firstname>
+		<lastname>Bauer</lastname>
+		<birthyear>1975</birthyear>
+		<gender>M</gender>
+		<style shooting-style-id ="TR"/>
+		<style shooting-style-id ="BB-R"/>
+		<score shooting-style-id="TR">98</score>
+		<score shooting-style-id="BB-R">33</score>		
+	</person>
+	
+	<person id="TR-BBR-10">
+		<firstname>Katharina</firstname>
+		<lastname>Schulz</lastname>
+		<birthyear>1992</birthyear>
+		<gender>W</gender>
+		<style shooting-style-id ="TR"/>
+		<style shooting-style-id ="BB-R"/>
+		<score shooting-style-id="TR">77</score>
+		<score shooting-style-id="BB-R">149</score>		
+	</person>
+	
+	<person id="TR-BBR-11">
+		<firstname>Thomas</firstname>
+		<lastname>Hoffmann</lastname>
+		<birthyear>1979</birthyear>
+		<gender>M</gender>
+		<style shooting-style-id ="TR"/>
+		<style shooting-style-id ="BB-R"/>
+		<score shooting-style-id="TR">83</score>
+		<score shooting-style-id="BB-R">111</score>		
+	</person>
+	
+	<person id="TR-BBR-12">
+		<firstname>Ludolf</firstname>
+		<lastname>Lehner</lastname>
+		<birthyear>1942</birthyear>
+		<gender>M</gender>
+		<style shooting-style-id ="TR"/>
+		<style shooting-style-id ="BB-R"/>
+		<score shooting-style-id="TR">73</score>
+		<score shooting-style-id="BB-R">79</score>
+	</person>
+	
+
+</tournament>

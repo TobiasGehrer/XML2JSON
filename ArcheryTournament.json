@@ -1,0 +1,390 @@
+{
+	"title" : "Archery Tournament 2024",
+	"shooting-styles" : [
+		{
+			"id" : "BB-R",
+			"style-name" : "Barebow Recurve"
+		},
+
+		{
+			"id" : "FS-C",
+			"style-name" : "Freestyle Limited Comp"
+		},
+
+		{
+			"id" : "TR",
+			"style-name" : "Traditional Recurve Bow"
+		}
+	],
+	"locations" : [
+		{
+			"id" : "location-1",
+			"name" : "Elfenbogen Ecke"
+		},
+
+		{
+			"id" : "location-2",
+			"name" : "Zielgenau Park"
+		},
+
+		{
+			"id" : "location-3",
+			"name" : "Kindergarten"
+		},
+
+		{
+			"id" : "location-4",
+			"name" : "Bogengarten"
+		}
+	],
+	"groups" : [
+		{
+			"id" : "Group-A-BBR",
+			"start-time" : "08:00",
+			"end-time" : "10:00",
+			"location-id" : "location-1",
+			"shooting-style-id" : "BB-R",
+			"group-members" : [
+				"BBR-FSC-1",
+				"BBR-FSC-2",
+				"BBR-FSC-3",
+				"BBR-FSC-4"
+			]
+		},
+
+		{
+			"id" : "Group-B-BBR",
+			"start-time" : "08:00",
+			"end-time" : "11:00",
+			"location-id" : "location-2",
+			"shooting-style-id" : "BB-R",
+			"group-members" : [
+				"TR-BBR-9",
+				"TR-BBR-10",
+				"TR-BBR-11",
+				"TR-BBR-12"
+			]
+		},
+
+		{
+			"id" : "Group-A-FSC",
+			"start-time" : "09:00",
+			"end-time" : "10:30",
+			"location-id" : "location-3",
+			"shooting-style-id" : "FS-C",
+			"group-members" : [
+				"BBR-FSC-1",
+				"BBR-FSC-2",
+				"BBR-FSC-3",
+				"BBR-FSC-4"
+			]
+		},
+
+		{
+			"id" : "Group-B-FSC",
+			"start-time" : "07:30",
+			"end-time" : "09:30",
+			"location-id" : "location-4",
+			"shooting-style-id" : "FS-C",
+			"group-members" : [
+				"TR-FSC-5",
+				"TR-FSC-6",
+				"TR-FSC-7",
+				"TR-FSC-8"
+			]
+		},
+
+		{
+			"id" : "Group-A-TR",
+			"start-time" : "14:00",
+			"end-time" : "15:00",
+			"location-id" : "location-1",
+			"shooting-style-id" : "TR",
+			"group-members" : [
+				"TR-BBR-9",
+				"TR-BBR-10",
+				"TR-BBR-11",
+				"TR-BBR-12"
+			]
+		},
+
+		{
+			"id" : "Group-B-TR",
+			"start-time" : "14:00",
+			"end-time" : "15:00",
+			"location-id" : "location-2",
+			"shooting-style-id" : "TR",
+			"group-members" : [
+				"TR-FSC-5",
+				"TR-FSC-6",
+				"TR-FSC-7",
+				"TR-FSC-8"
+			]
+		}
+	],
+	"persons" : [
+		{
+			"id" : "BBR-FSC-1",
+			"firstname" : "Robert",
+			"lastname" : "Roberts",
+			"birthyear" : "1962",
+			"gender" : "M",
+			"styles" : [
+				"BB-R",
+				"FS-C"
+			],
+			"scores" : [
+				{
+					"shooting-style-id" : "BB-R",
+					"score" : "100"
+				},
+				{
+					"shooting-style-id" : "FS-C",
+					"score" : "111"
+				}
+			]
+		},
+
+		{
+			"id" : "BBR-FSC-2",
+			"firstname" : "Anna",
+			"lastname" : "Schmidt",
+			"birthyear" : "1985",
+			"gender" : "W",
+			"styles" : [
+				"BB-R",
+				"FS-C"
+			],
+			"scores" : [
+				{
+					"shooting-style-id" : "BB-R",
+					"score" : "102"
+				},
+				{
+					"shooting-style-id" : "FS-C",
+					"score" : "112"
+				}
+			]
+		},
+
+		{
+			"id" : "BBR-FSC-3",
+			"firstname" : "Markus",
+			"lastname" : "Wagner",
+			"birthyear" : "1990",
+			"gender" : "M",
+			"styles" : [
+				"BB-R",
+				"FS-C"
+			],
+			"scores" : [
+				{
+					"shooting-style-id" : "BB-R",
+					"score" : "129"
+				},
+				{
+					"shooting-style-id" : "FS-C",
+					"score" : "89"
+				}
+			]
+		},
+
+		{
+			"id" : "BBR-FSC-4",
+			"firstname" : "Laura",
+			"lastname" : "Mueller",
+			"birthyear" : "1982",
+			"gender" : "W",
+			"styles" : [
+				"BB-R",
+				"FS-C"
+			],
+			"scores" : [
+				{
+					"shooting-style-id" : "BB-R",
+					"score" : "32"
+				},
+				{
+					"shooting-style-id" : "FS-C",
+					"score" : "1"
+				}
+			]
+		},
+
+		{
+			"id" : "TR-FSC-5",
+			"firstname" : "Max",
+			"lastname" : "Fischer",
+			"birthyear" : "1978",
+			"gender" : "M",
+			"styles" : [
+				"TR",
+				"FS-C"
+			],
+			"scores" : [
+				{
+					"shooting-style-id" : "TR",
+					"score" : "154"
+				},
+				{
+					"shooting-style-id" : "FS-C",
+					"score" : "12"
+				}
+			]
+		},
+
+		{
+			"id" : "TR-FSC-6",
+			"firstname" : "Julia",
+			"lastname" : "Maier",
+			"birthyear" : "1995",
+			"gender" : "W",
+			"styles" : [
+				"TR",
+				"FS-C"
+			],
+			"scores" : [
+				{
+					"shooting-style-id" : "TR",
+					"score" : "155"
+				},
+				{
+					"shooting-style-id" : "FS-C",
+					"score" : "123"
+				}
+			]
+		},
+
+		{
+			"id" : "TR-FSC-7",
+			"firstname" : "Simon",
+			"lastname" : "Becker",
+			"birthyear" : "1989",
+			"gender" : "M",
+			"styles" : [
+				"TR",
+				"FS-C"
+			],
+			"scores" : [
+				{
+					"shooting-style-id" : "TR",
+					"score" : "55"
+				},
+				{
+					"shooting-style-id" : "FS-C",
+					"score" : "87"
+				}
+			]
+		},
+
+		{
+			"id" : "TR-FSC-8",
+			"firstname" : "Sarah",
+			"lastname" : "Weber",
+			"birthyear" : "1980",
+			"gender" : "W",
+			"styles" : [
+				"TR",
+				"FS-C"
+			],
+			"scores" : [
+				{
+					"shooting-style-id" : "TR",
+					"score" : "99"
+				},
+				{
+					"shooting-style-id" : "FS-C",
+					"score" : "56"
+				}
+			]
+		},
+
+		{
+			"id" : "TR-BBR-9",
+			"firstname" : "Michael",
+			"lastname" : "Bauer",
+			"birthyear" : "1975",
+			"gender" : "M",
+			"styles" : [
+				"TR",
+				"BB-R"
+			],
+			"scores" : [
+				{
+					"shooting-style-id" : "TR",
+					"score" : "98"
+				},
+				{
+					"shooting-style-id" : "BB-R",
+					"score" : "33"
+				}
+			]
+		},
+
+		{
+			"id" : "TR-BBR-10",
+			"firstname" : "Katharina",
+			"lastname" : "Schulz",
+			"birthyear" : "1992",
+			"gender" : "W",
+			"styles" : [
+				"TR",
+				"BB-R"
+			],
+			"scores" : [
+				{
+					"shooting-style-id" : "TR",
+					"score" : "77"
+				},
+				{
+					"shooting-style-id" : "BB-R",
+					"score" : "149"
+				}
+			]
+		},
+
+		{
+			"id" : "TR-BBR-11",
+			"firstname" : "Thomas",
+			"lastname" : "Hoffmann",
+			"birthyear" : "1979",
+			"gender" : "M",
+			"styles" : [
+				"TR",
+				"BB-R"
+			],
+			"scores" : [
+				{
+					"shooting-style-id" : "TR",
+					"score" : "83"
+				},
+				{
+					"shooting-style-id" : "BB-R",
+					"score" : "111"
+				}
+			]
+		},
+
+		{
+			"id" : "TR-BBR-12",
+			"firstname" : "Ludolf",
+			"lastname" : "Lehner",
+			"birthyear" : "1942",
+			"gender" : "M",
+			"styles" : [
+				"TR",
+				"BB-R"
+			],
+			"scores" : [
+				{
+					"shooting-style-id" : "TR",
+					"score" : "73"
+				},
+				{
+					"shooting-style-id" : "BB-R",
+					"score" : "79"
+				}
+			]
+		}
+	]
+}
