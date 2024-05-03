@@ -29,8 +29,6 @@ public class StaxReader {
             readTournamentContent(r);
             output.write("\n}\n");
 
-            //moveToEndElem(r, "tournament");
-
             output.close();
 
         } catch (Exception e) {
@@ -128,14 +126,15 @@ public class StaxReader {
         }
         output.write("\n\t\t{\n");
 
-        //attributes
+        //id
         for (int i = r.getAttributeCount() - 1; i >= 0; i--) {
             writeKeyValue(r.getAttributeLocalName(i), r.getAttributeValue(i),3);
             delimiter = ",\n";
         }
 
         r.nextTag();
-        //element content
+
+        //style
         writeKeyValue(r.getLocalName(), r.getElementText(), 3);
 
         output.write("\n\t\t}");
@@ -150,13 +149,13 @@ public class StaxReader {
         }
         output.write("\n\t\t{\n");
 
-        //attributes
+        //id
         for (int i = r.getAttributeCount() - 1; i >= 0; i--) {
             writeKeyValue(r.getAttributeLocalName(i), r.getAttributeValue(i),3);
             delimiter = ",\n";
         }
 
-        //element content
+        //name
         writeKeyValue("name", r.getElementText(), 3);
 
         output.write("\n\t\t}");
@@ -169,26 +168,30 @@ public class StaxReader {
         }
         output.write("\n\t\t{\n");
 
-        //attributes
+        //id
         for (int i = r.getAttributeCount() - 1; i >= 0; i--) {
             writeKeyValue(r.getAttributeLocalName(i), r.getAttributeValue(i),3);
             delimiter = ",\n";
         }
 
-        //element content
-        r.nextTag();
-        writeKeyValue(r.getLocalName(), r.getElementText(), 3);
-        delimiter = ",\n";
+        //start-time
         r.nextTag();
         writeKeyValue(r.getLocalName(), r.getElementText(), 3);
         delimiter = ",\n";
 
+        //end-time
+        r.nextTag();
+        writeKeyValue(r.getLocalName(), r.getElementText(), 3);
+        delimiter = ",\n";
+
+        //location-id
         r.nextTag();
         for (int i = r.getAttributeCount() - 1; i >= 0; i--) {
             writeKeyValue(r.getAttributeLocalName(i), r.getAttributeValue(i),3);
             delimiter = ",\n";
         }
 
+        //shooting-style-id
         r.nextTag();
         r.nextTag();
         for (int i = r.getAttributeCount() - 1; i >= 0; i--) {
@@ -196,9 +199,9 @@ public class StaxReader {
             delimiter = ",\n";
         }
 
+        //group-members
         r.nextTag();
         r.nextTag();
-
         writeQuotedString("group-members", 3);
         delimiter = " : [\n";
         do {
@@ -221,26 +224,33 @@ public class StaxReader {
         }
         output.write("\n\t\t{\n");
 
-        //attributes
+        //id
         for (int i = r.getAttributeCount() - 1; i >= 0; i--) {
             writeKeyValue(r.getAttributeLocalName(i), r.getAttributeValue(i),3);
             delimiter = ",\n";
         }
 
-        //element content
-        r.nextTag();
-        writeKeyValue(r.getLocalName(), r.getElementText(), 3);
-        delimiter = ",\n";
-        r.nextTag();
-        writeKeyValue(r.getLocalName(), r.getElementText(), 3);
-        delimiter = ",\n";
-        r.nextTag();
-        writeKeyValue(r.getLocalName(), r.getElementText(), 3);
-        delimiter = ",\n";
+        //firstname
         r.nextTag();
         writeKeyValue(r.getLocalName(), r.getElementText(), 3);
         delimiter = ",\n";
 
+        //lastname
+        r.nextTag();
+        writeKeyValue(r.getLocalName(), r.getElementText(), 3);
+        delimiter = ",\n";
+
+        //birthyear
+        r.nextTag();
+        writeKeyValue(r.getLocalName(), r.getElementText(), 3);
+        delimiter = ",\n";
+
+        //gender
+        r.nextTag();
+        writeKeyValue(r.getLocalName(), r.getElementText(), 3);
+        delimiter = ",\n";
+
+        //styles
         r.nextTag();
         writeQuotedString("styles", 3);
         delimiter = " : [\n";
@@ -249,13 +259,12 @@ public class StaxReader {
                 writeQuotedString(r.getAttributeValue(i), 4);
                 delimiter = ",\n";
             }
-
             r.nextTag();
             r.nextTag();
-
         } while (r.getLocalName().equals("style"));
         output.write("\n\t\t\t]");
 
+        //scores
         writeQuotedString("scores", 3);
         delimiter = " : [\n";
         do {
@@ -264,21 +273,17 @@ public class StaxReader {
                 delimiter = null;
             }
             output.write("\t\t\t\t{\n");
-
             for (int i = r.getAttributeCount() - 1; i >= 0; i--) {
                 writeKeyValue(r.getAttributeLocalName(i), r.getAttributeValue(i),5);
                 delimiter = ",\n";
             }
-
             writeKeyValue(r.getLocalName(), r.getElementText(), 5);
             delimiter = "\n\t\t\t\t},\n";
-
             r.nextTag();
-
         } while (r.getLocalName().equals("score"));
+
         output.write("\n\t\t\t\t}");
         output.write("\n\t\t\t]");
-
         output.write("\n\t\t}");
     }
 
@@ -300,14 +305,4 @@ public class StaxReader {
         output.write(s);
         output.write('"');
     }
-
-
-    static void moveToEndElem(XMLStreamReader r, String elemName) throws XMLStreamException {
-        //skip everything until an end tag of elemName
-        do {
-            //skip for the next end element
-            while(r.next() != XMLStreamReader.END_ELEMENT) {}
-        } while (!r.getLocalName().equals(elemName));
-    }
-
 }
